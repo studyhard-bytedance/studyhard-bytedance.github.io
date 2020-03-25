@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,ol {
+    list-style-type: none;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+    >article{
+        display: flex;
+        flex-direction: column;
+        background-color: #E9EAED;
+        >header{
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right,#AD4194,#5361D7,#037DFD,#52D1A5);
+        }
+        nav{
+            height:50px;
+            display: flex;
+            background-color: #1C2327;
+            align-items: center;
+            margin-bottom: 20px;
+            h2{
+                padding: 0 70px;
+                transform: translateY(-4px);
+                a{
+                    color: #FFF;
+                    font-size: 0.8em;
+                }
+                a:hover{
+                    color: #FF6700;
+                }
+            }
+            ul{
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+                a{
+                    color:#FFF;
+                    font-size: 14px;
+                }
+                a:hover{
+                    color: #FF6700;
+                }
+            }
+            div {
+                padding: 0 70px;
+                i{
+                    color: #FFF;
+                }
+                i:hover{
+                    color: #FF6700;
+                }
+            }
+        }
+        //主体
+        main{
+            position: relative;
+            display: flex;  
+            //主体的左半部分          
+            section{
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                margin-left: 70px;
+                width: 900px;
+                height: 310px;
+                border: 1px solid black;
+                margin-right: 20px;
+                background-color: #fff;
+                //小标题
+                header{
+                    padding: 30px 400px 0 20px;
+                    border-bottom: 1px solid #E4E3E3;
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                        li{
+                            padding-bottom: 7px;
+                            // padding-top: 0;
+                        }
+                        li:nth-child(1){
+                            border-bottom: 3px solid black;
+                        }
+                    }
+                }
+                //内容
+                >article{
+                    flex:1;
+                    display: flex;
+                    padding: 10px 15px 20px 20px;
+                    >div{
+                        width: 295px;
+                        height: 220px;
+                        display: flex;
+                        flex-direction: column;
+                        border-right: 1px solid #E9EAED;
+                        padding-right: 15px;
+                        >div{
+                            height: 50%;
+                        }
+                    }
+                    >ul{
+                        flex: 1;
+                        border-left: 1px solid #E9EAED;
+                        padding-left: 15px;
+                        padding-bottom: ;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                }
+            }
+            //主体的右半部分
+            aside{
+                position: relative;
+                right: 0;
+                margin-right: 70px;
+                width: 283px;
+                height: 310px;
+                border: 1px solid black;
+                background-color: #fff;
+                ul{
+                    box-sizing: content-box;
+                    padding: 30px 0px 0px 20px;
+                    border-bottom: 1px solid #E4E3E3;
+                    p{
+                        margin-right: 196px;
+                        border-bottom: 3px solid black;
+                        padding-bottom: 7px;
+                        cursor: pointer;
+                        transition:1s;
+                    }
+                    p:hover{
+                        margin-right: 180px;
+                    }
+                }
+            }
+        }
+        footer{
+            >div:first-child{
+                width: 100%;
+                height: 5px;
+                background: linear-gradient(to right,#AD4194,#5361D7,#037DFD,#52D1A5);     
+            }
+            >div:last-child{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #373D41;
+                p{
+
+                }
+            }
+        }
+    }
+}
