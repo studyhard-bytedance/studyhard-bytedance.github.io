@@ -1,0 +1,85 @@
+header {
+  background-color: #fff;
+  border-bottom: 1px solid skyblue;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+header::before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, #A1449E, #467FD9, #027BFE, #57CBDA, #4ED77A);
+}
+header .navbar {
+  display: flex;
+  padding: 0.8rem 0;
+  align-items: center;
+}
+header .navbar .logo {
+  color: #7F7F7F;
+  font-size: 1.7rem;
+}
+header .navbar .logo:hover {
+  color: #FF6700;
+}
+header .navbar .collapse {
+  flex-grow: 1;
+  display: flex;
+}
+header .navbar .collapse .links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+header .navbar .collapse .links li {
+  margin: 0 1.5rem;
+  font-size: 1.1rem;
+}
+header .navbar .collapse .links li a {
+  color: #7F7F7F;
+}
+header .navbar .collapse .links li a:hover {
+  color: #FF6700;
+  font-weight: bold;
+}
+header .navbar label {
+  font-size: 1.2rem;
+  color: #7F7F7F;
+  cursor: pointer;
+  display: none;
+}
+header .navbar input {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  header .navbar {
+    flex-flow: row wrap;
+  }
+  header .navbar .logo {
+    margin: 0 auto;
+  }
+  header .navbar .collapse {
+    width: 100%;
+    display: none;
+  }
+  header .navbar .collapse .links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75rem;
+  }
+  header .navbar .collapse .links li {
+    padding: 0.3rem 0;
+  }
+  header .navbar .collapse .links li a {
+    color: #7F7F7F;
+  }
+  header .navbar label {
+    display: block;
+  }
+  header .navbar label + input:checked + .collapse {
+    display: flex;
+    right: 0;
+  }
+}

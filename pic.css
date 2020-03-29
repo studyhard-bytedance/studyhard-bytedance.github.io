@@ -1,0 +1,90 @@
+.pic {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+}
+.pic .pic-left {
+  width: 40rem;
+  height: 20rem;
+  overflow: hidden;
+}
+.pic .pic-left main {
+  width: 120rem;
+  height: 20rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  animation: slide 5s steps(3, end);
+  animation-iteration-count: infinite;
+}
+.pic .pic-left main:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.pic .pic-left main div {
+  overflow: hidden;
+  padding: 0.6rem 1rem;
+}
+.pic .pic-left main div img {
+  width: 100%;
+  height: 100%;
+}
+@keyframes slide {
+  to {
+    transform: translateX(-120rem);
+  }
+}
+.pic .pic-right {
+  flex-grow: 1;
+  display: flex;
+}
+.pic .pic-right main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pic .pic-right main div {
+  width: 300px;
+  height: 136.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 0.6rem;
+  position: relative;
+}
+.pic .pic-right main div a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #27ae60;
+  position: relative;
+  z-index: 1;
+}
+.pic .pic-right main div img {
+  height: 100%;
+  position: absolute;
+  transition: 2s;
+}
+.pic .pic-right main div img:hover {
+  transform: scale(1.1);
+}
+.pic .pic-right .name-card {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 0.6rem 0;
+  background: linear-gradient(to right, #e67e22, #8e44ad, #1abc9c, #e74c3c);
+}
+.pic .pic-right .name-card div {
+  padding: 1rem 0.7rem;
+}
+.pic .pic-right .name-card div:nth-of-type(1) {
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .pic .pic-right {
+    display: none;
+  }
+}

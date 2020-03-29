@@ -1,0 +1,100 @@
+.pic {
+    width:100%;
+    height: 20rem;
+    display: flex;
+
+    .pic-left {
+        width: 40rem;
+        height: 20rem;
+        overflow: hidden;
+        
+        main{
+            width: 120rem;
+            height: 20rem;
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            animation: slide 5s steps(3,end);
+            animation-iteration-count: infinite;
+            
+            &:hover {
+                animation-play-state: paused;
+                cursor: pointer;
+            }
+
+            div{
+                overflow: hidden;
+                padding: 0.6rem 1rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                @keyframes slide {
+                    to {
+                        transform: translateX(-120rem);
+                    }
+                }
+            }
+        }
+    }
+
+    .pic-right {
+        flex-grow:1;
+        display: flex;
+
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            div{
+                width: 300px;
+                height: 136.5px;
+                display:flex;
+                justify-content: center;
+                align-items: center;  
+                cursor: pointer;
+                overflow: hidden;
+                margin-top: .6rem;
+                position: relative;
+                a{
+                    font-size: 1.5rem;
+                    font-weight: bold;  
+                    color:#27ae60;
+                    position: relative;
+                    z-index: 1;
+                }
+                
+                img{
+                    height: 100%;
+                    position: absolute;
+                    transition: 2s;
+                    &:hover {
+                        transform:scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .name-card {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            border:1px solid black;
+            margin:.6rem 0;
+            background: linear-gradient(to right,#e67e22,#8e44ad,#1abc9c,#e74c3c);
+            div{
+                padding:1rem 0.7rem;
+                &:nth-of-type(1){
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:768px){
+    .pic {
+        .pic-right {
+            display:none;
+        }
+    }
+}
