@@ -1,0 +1,29 @@
+@import url(navbar.css);
+@import url(pic.css);
+@import url(extra-small.css) only screen and (max-width:768px);
+@import url(small.css) only screen and (min-width:768px);
+@import url(medium.css) only screen and (min-width:960px);
+@import url(large.css) only screen and (min-width:1200px);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+:root {
+    font-size: 15px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
