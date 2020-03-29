@@ -3,73 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阎杰个人博客</title>
+    <link rel="stylesheet" href="common.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <title>Myself</title>
-    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <article>
-        <!-- 头部 -->
-        <header></header>
-        <!-- 导航 -->
-        <nav>
-            <h2><a href="">阎杰个人博客网站</a></h2>
-            <ul>
-                <li><a href="">网站首页</a></li>
-                <li><a href="">个人博客</a></li>
-                <li><a href="">心得体会</a></li>
-                <li><a href="">关于我</a></li>
-                <li><a href="">时间轴</a></li>
-                <li><a href="">留言</a></li>
-            </ul>
-            <div>
-                <a href=""><i class="fa fa-search"></i></a>
-            </div>
-        </nav>
-        <!-- 主体内容 -->
-        <main>
-            <!-- 主体左半部分 -->
-            <section>
-                <header>
-                    <ul>
-                        <li><a href="">一</a></li>
-                        <li><a href="">二</a></li>
-                        <li><a href="">三</a></li>
-                        <li><a href="">四</a></li>
-                        <li><a href="">五</a></li>
+    <!-- 顶部和菜单栏 -->
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <a href="" class="logo">阎杰个人博客网站</a>
+                <label for="open" >
+                    <i class="fa fa-tasks"></i>
+                </label>
+                <input type="checkbox" id="open">
+                <div class="collapse">
+                    <ul class="links">
+                        <li><a href="">个人博客</a></li>
+                        <li><a href="">心得体会</a></li>
+                        <li><a href="">关于我</a></li>
+                        <li><a href="">时间轴</a></li>
+                        <li><a href="">留言</a></li>
                     </ul>
-                </header>
-                <article>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 轮换图 -->
+    <div class="container">
+        <div class="pic">
+            <div class="pic-left">
+                <main>
+                    <div><img src="images/1.jpg" alt=""></div>
+                    <div><img src="images/2.jpg" alt=""></div>
+                    <div><img src="images/3.jpg" alt=""></div>
+                </main>
+            </div>
+            <div class="pic-right">
+                <main>
                     <div>
-                        <div></div>
-                        <div></div>
+                        <a href="">学习日志</a>
+                        <img src="images/4.jpg" alt="">
                     </div>
-                    <ul>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                    </ul>
-                </article>
-            </section>
-            <!-- 主体右半部分 -->
-            <aside>
-                <ul>
-                    <p>最近更新</p>
-                </ul>
-                <div></div>
-                <div></div>
-                <div></div>
-            </aside>
-        </main>
-        <footer>
-            <div></div>
-            <div>
-                <p>本博客是个人学习的过程，如有查出漏洞请联系本人15512835509@163.com</p> 
-                <p>此次为第一版，只把基本框架列了出来，适配手机和电脑部分后续会添加</p>
+                    <div>
+                        <a href="">学习计划</a>
+                        <img src="images/5.jpg" alt="">
+                    </div>
+                </main>
+                <div class="name-card">
+                    <div>我的名片</div>
+                    <div>职业：目前为大四学生，寻找工作中...</div>
+                    <div>QQ:873891018</div>
+                    <div>邮箱:15512835509@163.com</div>
+                </div>
             </div>
-        </footer>
-    </article>
+        </div>
+    </div>
+
+    <!-- 文章栏 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-lg-8 col-xs-12">
+                <div class="card-header"></div>
+                <div class="card-body"></div>
+                <div class="card-footer"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

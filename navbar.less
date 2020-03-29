@@ -1,0 +1,96 @@
+header {
+    background-color: #fff;
+    border-bottom: 1px solid skyblue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &::before {
+        content: '';
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: linear-gradient(to right,#A1449E,#467FD9,#027BFE,#57CBDA,#4ED77A);
+    }
+    .navbar {
+        display: flex;
+        padding: 0.8rem 0;
+        align-items: center;
+
+        .logo {
+            color: #7F7F7F;
+            font-size: 1.7rem;
+            &:hover {
+                color: #FF6700;
+            }
+        }
+
+        .collapse {
+            flex-grow: 1;
+            display: flex;
+
+            .links {
+                margin-left: auto;
+                display: flex;
+                align-items: center;
+
+                li {
+                    margin: 0 1.5rem;
+                    font-size: 1.1rem;
+                    
+                    a {
+                        color:#7F7F7F;
+                        &:hover {
+                            color: #FF6700;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        label{
+            font-size: 1.2rem;
+            color: #7F7F7F;
+            cursor: pointer;
+            display:none;
+        }
+        input{
+             display:none;
+        }
+    }
+}
+
+@media only screen and (max-width:768px){
+    header {
+        .navbar {
+            flex-flow: row wrap;
+            .logo {
+                margin: 0 auto;
+            }
+            .collapse {
+                width: 100%;
+                display:none;
+                .links {
+                    display:flex;
+                    flex-direction: column; 
+                    margin-top: .75rem;
+                    li{
+                        padding:.3rem 0;
+                        a {
+                            color:#7F7F7F;
+                        }
+                    }
+                }
+            }
+            label {
+                display: block;
+
+                &+input:checked {
+                    &+.collapse{
+                        display:flex;
+                        right:0;
+                    }
+                }
+            }
+        }
+    }
+}
